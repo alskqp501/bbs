@@ -1,0 +1,16 @@
+package test4_mvc;
+
+import java.util.Vector;
+
+public interface Dao {
+//추상메소드만 들어있는??? 구현한 클래스를 하나 만들어랑 
+	
+	
+	void insert(Product p);
+	Product select (int num);
+	Vector<Product> selectAll();
+	void delete (int num);
+	void update (int num, Product p);
+	
+	
+}

@@ -1,0 +1,19 @@
+package test4_mvc;
+
+import java.util.Scanner;
+
+import test4_mvc.service.Service;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Service service = new ServiceImpl(); //부모의 인터페이스 눈으로 생성된 자식 보기 
+		
+		
+		
+
+	}
+
+}

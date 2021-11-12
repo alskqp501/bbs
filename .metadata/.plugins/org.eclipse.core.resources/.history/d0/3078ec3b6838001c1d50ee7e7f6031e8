@@ -1,0 +1,5 @@
+package test3;
+
+public class SampleDTO {
+//클래스 아넹 데이터를 넣고 끌어다가 쓰겟다 
+}

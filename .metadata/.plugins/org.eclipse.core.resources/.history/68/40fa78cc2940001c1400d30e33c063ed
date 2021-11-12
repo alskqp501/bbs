@@ -1,0 +1,41 @@
+package plsapl;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ProcedureTest {
+	
+	//저장프로시저 호출전 데이터 입력 
+	Connection con = null;
+	
+		public void insert() throws ClassNotFoundException, SQLException {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String ur1 = "jdbc:oracle:thin:@localhost:1521:orcl";
+
+			con = DriverManager.getConnection(ur1, "scott", "scott");
+			CallableStatement cs = con.prepareCall("{call member2(?,?,?,?,?,?)}"); 
+			String query = "insert into member2 values('Alpha', '1234', 'AI', 20, 'LA', go@ai.com)";
+	
+		}		
+
+		public void select(){ 
+
+		} 
+
+		//저장프로시저 호출 후 데이터 입력 
+
+		public void insertMember(){ 
+		 
+		} 
+
+		
+		
+		public static void main(String[] args) { 
+
+
+		}	 
+
+	}
+

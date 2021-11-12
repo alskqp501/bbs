@@ -1,0 +1,19 @@
+
+
+create table product(
+num number(4) primary key,
+name varchar2(20),
+price number(10)
+);
+
+--sequence
+--시퀸스 
+
+create Sequence p_seq
+start with 0 --시작 
+increment by 1 -- 증가 
+minvalue 0; 
+
+insert into product values (p_seq.nextval,'컴퓨터', 10000);
+insert into product values (p_seq.nextval,'휴대폰', 20000);
+select * from product;

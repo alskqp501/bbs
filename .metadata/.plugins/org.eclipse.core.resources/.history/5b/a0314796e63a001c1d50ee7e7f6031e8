@@ -1,0 +1,56 @@
+package test4_mvc.service;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+import test4_mvc.dao.Dao;
+import test4_mvc.dao.OracleDao;
+import test4_mvc.dto.Product;
+public class ServiceImpl implements Service {
+	Scanner sc = new Scanner(System.in);
+	Dao dao = new OracleDao();
+
+	@Override
+	public void addProduct() { //insert 할떄
+	// Scanner 키보드 입력 부분 
+		System.out.println("제품이름은?");
+		String name = sc.next();
+		System.out.println("제품가격은?");
+		int price = sc.nextInt();
+		
+		dao.insert(new Product(0,name,price));
+	}
+
+	@Override
+	public void editProduct() { //  select one
+
+	}
+
+	@Override
+	public void delProduct() { // delete
+		
+
+	}
+
+	@Override
+	public Product getProduct() { // update
+		
+		return null;
+	}
+
+	@Override
+	public Vector<Product> getProducts() { // select all 
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+
+	
+
+}

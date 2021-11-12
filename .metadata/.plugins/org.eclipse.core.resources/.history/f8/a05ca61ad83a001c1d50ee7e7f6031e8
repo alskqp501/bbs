@@ -1,0 +1,43 @@
+package test4_mvc.dao;
+
+import java.util.Vector;
+
+import test4_mvc.Product;
+
+public class OracleDao implements Dao {
+
+	@Override
+	public void insert(Product p) {
+
+	}
+
+	@Override
+	public Product select(int num) {
+		
+		return null;
+	}
+
+	@Override
+	public Vector<Product> selectAll() {
+		
+		return null;
+	}
+
+	@Override
+	public void delete(int num) {
+		
+
+	}
+
+	@Override
+	public void update(int num, Product p) {
+		
+
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

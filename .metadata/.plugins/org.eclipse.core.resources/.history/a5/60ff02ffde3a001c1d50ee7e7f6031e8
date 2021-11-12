@@ -1,0 +1,50 @@
+package test4_mvc.service;
+
+import java.util.Vector;
+
+import test4_mvc.dao.Dao;
+import test4_mvc.dao.OracleDao;
+import test4_mvc.dto.Product;
+public class ServiceImpl implements Service {
+	
+	Dao dao = new OracleDao();
+
+	@Override
+	public void addProduct() { //insert 할떄
+		dao.insert(getProduct());
+	
+	}
+
+	@Override
+	public void editProduct() { //  select one
+
+	}
+
+	@Override
+	public void delProduct() { // delete
+		
+
+	}
+
+	@Override
+	public Product getProduct() { // update
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vector<Product> getProducts() { // select all 
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+
+	
+
+}

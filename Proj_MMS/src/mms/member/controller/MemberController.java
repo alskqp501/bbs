@@ -1,0 +1,26 @@
+package mms.member.controller;
+
+import java.util.Scanner;
+
+import mms.member.action.Action;
+
+public class MemberController {
+	//사용자의 전체 요청을 제어하는 클래스 구현 
+	public void processRequest(Action action,Scanner sc){ 
+
+		try{ 
+
+		action.execute(sc); 
+
+		} 
+
+		catch(Exception e){ 
+
+		e.printStackTrace(); 
+
+		} 
+
+		}	 
+	
+
+}

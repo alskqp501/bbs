@@ -1,0 +1,39 @@
+package ttttt;
+
+import java.util.Vector;
+
+import test4_mvc.dto.Product;
+
+public class DAOoverride implements DAO {
+
+	@Override
+	public void insert(Product p) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Product select(int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int num) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(int num) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Vector<Product> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,43 @@
+package plsapl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ProcedureTest {
+	Connection con = null;
+	Statement stmt = null;
+
+		public void insert() throws ClassNotFoundException, SQLException {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String ur1 = "jdbc:oracle:thin:@localhost:1521:orcl";
+
+			con = DriverManager.getConnection(ur1, "scott", "scott");
+			stmt = con.createStatement();
+			String query = "insert into member2 values('Alpha', '1234', 'AI', 20, 'LA', go@ai.com)";
+			int count = stmt.executeUpdate(query);
+
+		}		
+
+		
+
+		public void select(){ 
+
+		} 
+
+		//저장프로시저 호출 후 데이터 입력 
+
+		public void insertMember(){ 
+		 
+		} 
+
+		
+		
+		public static void main(String[] args) { 
+
+
+		}	 
+
+	}
+

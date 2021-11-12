@@ -1,0 +1,55 @@
+package test4_mvc.dao;
+
+import java.sql.Connection;
+import java.util.Vector;
+import test4_mvc.dto.Product;
+import test4_mvc.util.DBConnect;
+
+public class OracleDao implements Dao {
+	
+	Connection conn = null;
+	public OracleDao () {
+		DBConnect dbconn = DBConnect.getConnection(); // 1.singleton 갹체ㅡㄹ 계속 생성하면 메모리 효율 떠렁지니까 한번만 가져다 쓰겟다 
+		Connection conn =  dbconn.getConnection()//2. db 연결 
+	}
+	
+	public connection getConn() {
+		return conn;
+	}
+	
+	
+	@Override
+	public void insert(Product p) {
+		String sql = "insert into product values (p_seq.nextval,'홍길동',10000)";
+	}
+
+	@Override
+	public Product select(int num) {
+		
+		return null;
+	}
+
+	@Override
+	public Vector<Product> selectAll() {
+		
+		return null;
+	}
+
+	@Override
+	public void delete(int num) {
+		
+
+	}
+
+	@Override
+	public void update(int num, Product p) {
+		
+
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package test4_mvc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnect {
+
+	
+			private DBConnect() {
+				
+			}
+			
+			public static DBConnect getInstance() {
+				return db;
+			}
+			
+			public static DBConnect getConnection() {
+				return conn;
+			}
+}
+	
+
+

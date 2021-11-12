@@ -1,0 +1,68 @@
+package test3;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import study02_DB.User;
+
+public class SampleDAO {
+	public ArrayList<SampleDTO> findAll() {
+		
+		Connection conn = null;
+		try {
+			//Class.forName("java.lang.String);
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String ur1 = "jdbc:oracle:thin:@localhos:1521:orcl";
+			
+				conn = DriverManager.getConnection(ur1,"javalink","javalink");
+				conn.close();
+				
+		} catch (ClassNotFoundException e) {
+			System.out.println("Driver가 없음 :: 해당 클래스를 찾을 수 없습니다.");
+		
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		System.out.println("정상종료"); // 항상 실행 
+		
+			SampleDTO sampleDTOs = null;
+			Statement stmt = null;
+			try {
+				stmt = conn.createStatement();
+				String sql = "select *from book where id = '" +id + "' AND " + "name ='" + name + "'";
+				ResultSet rs = stmt.executeQuery(sql); // 이거수행항면 오라클데이터베이스 갓다온거임 ('aaa','aaa','홍길동',22,'서울시','a@a.com'); => 한사람꺼
+				if (rs.next()) { // 여러사람 출력하고 싶을떄는 while
+					String id = rs.getString(1);
+					String name = rs.getString(2);
+					 int price = rs.getInt(3);
+				sampleDTOs = new SampleDTO (id, name, price);
+				}
+
+				
+			}	
+			
+			catch(SQLException se) {
+				se.printStackTrace();
+			}
+			finally {
+				try {
+					conn.close();
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		
+		return sampleDTOs;
+		
+		
+	
+	
+	
+}
+	
+
+}

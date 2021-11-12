@@ -1,0 +1,42 @@
+package test4_mvc;
+
+import java.util.Vector;
+
+public class ProductService implements Service {
+
+	@Override
+	public void addProduct() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void editProduct() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delProduct() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Product getProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vector<Product> getProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

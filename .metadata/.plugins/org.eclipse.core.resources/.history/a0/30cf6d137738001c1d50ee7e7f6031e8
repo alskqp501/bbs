@@ -1,0 +1,7 @@
+--javalink / javalink
+--테이블 
+create table book(
+id varchar2(10),
+name varchar2(10),
+price number(30) 
+);

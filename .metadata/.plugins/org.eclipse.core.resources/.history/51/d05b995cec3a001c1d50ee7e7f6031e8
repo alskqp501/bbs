@@ -1,0 +1,27 @@
+package test3;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class SampleMain {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		SampleDAO dao = new SampleDAO();
+		dao.findAll();
+		ArrayList<SampleDTO> books = dao.findAll(); // findALL에 있는 내용을 ArrayLIst<>에 넣어주기 
+		
+//		//for출력
+//		for(SampleDTO st : books)
+//			System.out.println("id : " + st.getId());
+//			System.out.println("name : " + st.getName());
+//			System.out.println("price : " + st.getPrice());
+//			System.out.println();
+//		
+
+	}
+
+}

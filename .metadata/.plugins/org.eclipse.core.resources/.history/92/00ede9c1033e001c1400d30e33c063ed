@@ -1,0 +1,18 @@
+create or replace procedure javatest(
+p1 in varchar2,
+p2 in out varchar2,
+p3 out varchar2
+)
+
+as
+begin 
+	p1 := 'a';
+	p2 :='b';
+	p;
+	
+	DBMS_OUTPUT.PUT_LINE ('p2 = ' || p2);
+    DBMS_OUTPUT.PUT_LINE ('p3 = ' || p3);
+
+end ;
+
+

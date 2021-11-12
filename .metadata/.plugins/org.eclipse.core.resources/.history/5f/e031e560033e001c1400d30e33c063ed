@@ -1,0 +1,23 @@
+package plsapl;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class CallInoutProc extends Object{
+	public static void main(String[] args) throws ClassNotFoundException {
+	
+		//DB접속 
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		String ur1 = "jdbc:oracle:thin:@localhost:1521:orcl";
+		
+		//변수 선언 
+		String p1value = new String ("a");
+		String p2value = new String ("b");
+		String p3value;
+		
+		Connection conn = DriverManager.getConnection(ur1,"javalink","javalink");
+		CallableStatement cs = conn.prepareCall("{call computer_power(?,?,?)}"); 
+		
+		
+}

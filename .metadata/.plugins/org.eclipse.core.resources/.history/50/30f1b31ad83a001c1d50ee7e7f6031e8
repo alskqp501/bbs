@@ -1,0 +1,38 @@
+package test4_mvc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnect {
+	
+	private static DBConnect db = new DBConnect();
+	private Connection conn = null; //제 3자가 가져다 쓸수없음
+	
+	String jdbc_driver =  "oracle.jdbc.driver.OracleDriver";
+	String ur1 = "jdbc:oracle:thin:@localhost:1521:orcl";
+	
+	private DBConnect() { // 생성자
+		try {
+				Class.forName(jdbc_driver);
+				conn = DriverManager.getConnection(ur1, "javalink", "javalink");
+			
+			
+		} catch (ClassNotFoundException e) {
+		
+		} catch (SQLException e) {
+	}
+	}
+	
+	
+	// Singleton : 메소드르 통한 객체생성을 한번만, 현재 클래스에서 생성
+	public static DBConnect getInstance() { // 싱글통레 해당
+		return db;
+	}
+
+	//db연결 완료된 상태 
+	public static DBConnect getConnection() { // 연결하려는 내용을 가져다 쓰겠다 
+		
+		return conn;
+	}
+}

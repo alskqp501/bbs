@@ -1,0 +1,37 @@
+package test4_mvc.controller;
+
+import java.util.Vector;
+
+import test4_mvc.dto.Product;
+import test4_mvc.service.Service;
+import test4_mvc.service.ServiceImpl;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+		System.out.println("1.제품등록 | 2.제품검색 | 3.전체검색 | 4.수정 | 5.삭제 | 6.종료");
+		Service service = new ServiceImpl(); //부모의 인터페이스 눈으로 생성된 자식 보기 
+		
+		//1. insert
+		service.addProduct();
+		System.out.println("1.제품등록 | 2.제품검색 | 3.전체검색 | 4.수정 | 5.삭제 | 6.종료");
+		
+		//2. 제품 검색 select one 
+		Product p =  service.getProduct();
+		System.out.println(p);
+		System.out.println("1.제품등록 | 2.제품검색 | 3.전체검색 | 4.수정 | 5.삭제 | 6.종료");
+		
+		//3. select All
+		Vector<Product> v = service.getProducts(); // select all 벡터의 주소값
+		for(int i = 0; i<v.size();i++) 
+			System.out.println(v.get(i));
+		System.out.println("1.제품등록 | 2.제품검색 | 3.전체검색 | 4.수정 | 5.삭제 | 6.종료");
+		//4. update
+		service.editProduct();
+		System.out.println("1.제품등록 | 2.제품검색 | 3.전체검색 | 4.수정 | 5.삭제 | 6.종료");
+		//5. delete
+		service.delProduct(); 
+
+	}
+
+}
